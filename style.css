@@ -2606,7 +2606,14 @@ body {
   flex-shrink: 0;
 }
 
-/* Strategy panel link arrows */
+/* Screen-map clickable list items */
+.strategy-list li[data-goto] {
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+.strategy-list li[data-goto]:hover { opacity: 0.65; }
+
+/* Strategy panel link arrows (legacy) */
 .smap-link {
   font-size: 11px;
   color: var(--primary);
