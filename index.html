@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduSpark — Learn English & Maths</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+
+<div class="page-wrapper">
+
+  <!-- ===== Phone Frame ===== -->
+  <div class="phone-frame">
+    <div class="phone-screen">
+
+      <!-- S1: Splash / Welcome -->
+      <section id="screen-splash" class="screen screen-splash active">
+        <div class="splash-logo">
+          <svg viewBox="0 0 56 56" fill="none">
+            <path d="M28 6L8 18v20l20 12 20-12V18L28 6z" fill="rgba(255,255,255,0.9)"/>
+            <path d="M28 14l-12 7.2V35L28 42l12-7.2V21L28 14z" fill="rgba(108,92,231,0.8)"/>
+            <circle cx="28" cy="28" r="6" fill="rgba(255,255,255,0.95)"/>
+            <path d="M26 25.5l5 2.5-5 2.5v-5z" fill="rgba(108,92,231,0.9)"/>
+          </svg>
+        </div>
+        <h1 class="splash-title">EduSpark</h1>
+        <p class="splash-tagline">Learn English & Maths, the fun way</p>
+        <div class="splash-social-proof">
+          <div class="avatar-stack">
+            <div class="avatar" style="background:#FF6B6B">👩</div>
+            <div class="avatar" style="background:#00B894">👨</div>
+            <div class="avatar" style="background:#FDCB6E">👧</div>
+            <div class="avatar" style="background:#74B9FF">👦</div>
+          </div>
+          <span>500K+ learners worldwide</span>
+        </div>
+        <button class="btn-cta" data-goto="onboarding">
+          Get Started Free
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </section>
+
+      <!-- S2: Onboarding Carousel -->
+      <section id="screen-onboarding" class="screen screen-onboarding">
+        <button class="ob-skip" data-goto="signup">Skip</button>
+        <div class="ob-slides-wrapper">
+          <div class="ob-slide ob-slide-active" data-index="0">
+            <div class="ob-illustration ob-illus-1">
+              <span class="ob-float ob-float-a">⭐</span>
+              <span class="ob-float ob-float-b">✨</span>
+              <span class="ob-main-emoji">📚</span>
+            </div>
+            <h2 class="ob-title">Learn at Your Pace</h2>
+            <p class="ob-desc">Interactive English &amp; Maths lessons for busy learners. Just 10 minutes a day makes a real difference.</p>
+          </div>
+          <div class="ob-slide" data-index="1">
+            <div class="ob-illustration ob-illus-2">
+              <span class="ob-float ob-float-a">🎯</span>
+              <span class="ob-float ob-float-b">💫</span>
+              <span class="ob-main-emoji">🧠</span>
+            </div>
+            <h2 class="ob-title">Practice &amp; Improve</h2>
+            <p class="ob-desc">Smart quizzes adapt to your skill level. Earn XP points and level up with every correct answer.</p>
+          </div>
+          <div class="ob-slide" data-index="2">
+            <div class="ob-illustration ob-illus-3">
+              <span class="ob-float ob-float-a">🌟</span>
+              <span class="ob-float ob-float-b">🎉</span>
+              <span class="ob-main-emoji">🏆</span>
+            </div>
+            <h2 class="ob-title">Achieve Your Goals</h2>
+            <p class="ob-desc">Build streaks, unlock achievements, and join 500K+ learners already reaching their potential.</p>
+          </div>
+        </div>
+        <div class="ob-dots">
+          <span class="ob-dot ob-dot-active"></span>
+          <span class="ob-dot"></span>
+          <span class="ob-dot"></span>
+        </div>
+        <button class="btn-ob-action" id="ob-next-btn">
+          Next
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </section>
+
+      <!-- S3: Sign Up / Login -->
+      <section id="screen-signup" class="screen screen-signup">
+        <button class="signup-back" data-goto="splash">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <div class="signup-header">
+          <h1>Create Account</h1>
+          <p>Start your learning journey today</p>
+        </div>
+        <div class="signup-card">
+          <div class="social-login">
+            <button class="btn-social" data-goto="home">
+              <svg viewBox="0 0 24 24" width="20" height="20">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+              </svg>
+              Continue with Google
+            </button>
+            <button class="btn-social" data-goto="home">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="#000">
+                <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+              </svg>
+              Continue with Apple
+            </button>
+          </div>
+          <div class="divider"><span>or sign up with email</span></div>
+          <div class="input-group">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            <input type="text" placeholder="Full Name">
+          </div>
+          <div class="input-group">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <input type="email" placeholder="Email Address">
+          </div>
+          <div class="input-group">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0110 0v4"/>
+            </svg>
+            <input type="password" placeholder="Password">
+          </div>
+          <button class="btn-signup" data-goto="home">Create Account</button>
+        </div>
+        <div class="signup-footer">
+          <a class="guest-link" data-goto="home">
+            Skip for now? <strong>Continue as Guest</strong>
+          </a>
+        </div>
+      </section>
+
+      <!-- S4: Home Dashboard -->
+      <section id="screen-home" class="screen screen-home">
+        <div class="home-header">
+          <div class="home-greeting">
+            <div class="greeting-text">
+              <h2>Good morning 👋</h2>
+              <h1>Alex Chen</h1>
+            </div>
+            <div class="home-avatar">🧑</div>
+          </div>
+          <div class="stats-row">
+            <div class="stat-card" style="position:relative">
+              <span class="annotation-badge annot-r" style="top:-9px;right:-9px">🔄 Retention</span>
+              <div class="stat-card-label">Daily Streak</div>
+              <div class="stat-card-value">
+                <span class="streak-fire">🔥</span>
+                <strong>12</strong>
+                <span>days</span>
+              </div>
+            </div>
+            <div class="stat-card" style="position:relative">
+              <span class="annotation-badge annot-e" style="top:-9px;right:-9px">⚡ Engagement</span>
+              <div class="stat-card-label">Total XP</div>
+              <div class="stat-card-value">
+                <strong>2,450</strong>
+                <span>/ 3,800</span>
+              </div>
+              <div class="xp-progress">
+                <div class="xp-bar-bg">
+                  <div class="xp-bar-fill"></div>
+                </div>
+                <div class="xp-label">
+                  <span>Level 8</span>
+                  <span>Level 9</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="home-body">
+          <h3 class="section-title" style="position:relative">
+            Continue Learning
+            <span class="annotation-badge annot-r" style="top:2px;right:0">🔄 Retention</span>
+          </h3>
+          <div class="quick-cards">
+            <div class="quick-card" data-goto="courses">
+              <div class="quick-card-icon english">📖</div>
+              <div class="quick-card-info">
+                <h4>English — Lesson 5</h4>
+                <p>Past Tense Irregular Verbs</p>
+              </div>
+              <svg class="quick-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </div>
+            <div class="quick-card" data-goto="courses">
+              <div class="quick-card-icon maths">🧮</div>
+              <div class="quick-card-info">
+                <h4>Maths — Quick Quiz</h4>
+                <p>Fractions & Decimals Review</p>
+              </div>
+              <svg class="quick-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </div>
+            <div class="quick-card" data-goto="courses">
+              <div class="quick-card-icon english">🎧</div>
+              <div class="quick-card-info">
+                <h4>Listening Practice</h4>
+                <p>Everyday Conversations</p>
+              </div>
+              <svg class="quick-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </div>
+          </div>
+
+          <h3 class="section-title" style="position:relative">
+            Daily Tip
+            <span class="annotation-badge annot-r" style="top:2px;right:0">🔄 Retention</span>
+          </h3>
+          <div class="tip-card">
+            <span class="tip-icon">💡</span>
+            <div>
+              <h4>Practice makes perfect</h4>
+              <p>Complete just 10 minutes of practice daily to improve your score by 40% in 30 days!</p>
+            </div>
+          </div>
+
+          <button class="btn-view-progress" data-goto="progress">
+            <span class="vp-left">
+              <span class="vp-icon">📊</span>
+              <span class="vp-text">
+                <strong>My Learning Path</strong>
+                <small>Level 8 · 12-day streak</small>
+              </span>
+            </span>
+            <svg class="vp-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Bottom Nav -->
+        <nav class="bottom-nav">
+          <button class="nav-item active" data-screen="home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+            <span>Home</span>
+          </button>
+          <button class="nav-item" data-screen="courses">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+            </svg>
+            <span>Courses</span>
+          </button>
+          <button class="nav-item" data-screen="chat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+            </svg>
+            <span>Chat</span>
+          </button>
+          <button class="nav-item" data-screen="settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            <span>Profile</span>
+          </button>
+        </nav>
+      </section>
+
+      <!-- S5: Course Menu -->
+      <section id="screen-courses" class="screen screen-courses">
+        <div class="courses-header">
+          <h1>Courses</h1>
+          <p>Choose your subject and level</p>
+        </div>
+
+        <div class="course-tabs">
+          <button class="course-tab active" data-category="english">📖 English</button>
+          <button class="course-tab" data-category="maths">🧮 Maths</button>
+        </div>
+
+        <!-- English courses -->
+        <div class="course-list" data-category="english">
+          <div class="course-card" data-goto="lesson">
+            <div class="course-thumbnail">
+              <div class="course-thumbnail-bg english-1">📝</div>
+              <span class="course-badge badge-beginner">Beginner</span>
+            </div>
+            <div class="course-info">
+              <h3>Grammar Foundations</h3>
+              <p>Master essential grammar rules with interactive exercises and real-world examples.</p>
+              <div class="course-meta">
+                <span class="course-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  12 lessons
+                </span>
+                <span class="course-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                  3.2K enrolled
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-goto="lesson">
+            <div class="course-thumbnail">
+              <div class="course-thumbnail-bg english-2">🎧</div>
+              <span class="course-badge badge-intermediate">Intermediate</span>
+            </div>
+            <div class="course-info">
+              <h3>Listening & Speaking</h3>
+              <p>Improve comprehension and fluency with audio-driven lessons and pronunciation drills.</p>
+              <div class="course-meta">
+                <span class="course-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  18 lessons
+                </span>
+                <span class="course-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                  1.8K enrolled
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card premium">
+            <div class="course-thumbnail">
+              <div class="course-thumbnail-bg english-3">✍️</div>
+              <span class="course-badge badge-advanced">Advanced</span>
+              <div class="premium-lock">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0110 0v4"/>
+                </svg>
+                <span>Premium</span>
+              </div>
+            </div>
+            <div class="course-info">
+              <h3>Academic Writing</h3>
+              <p>Craft compelling essays, reports, and professional communications with expert guidance.</p>
+              <div class="course-meta">
+                <span class="course-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  24 lessons
+                </span>
+                <span class="course-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                  956 enrolled
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Maths courses -->
+        <div class="course-list" data-category="maths" style="display: none;">
+          <div class="course-card" data-goto="lesson">
+            <div class="course-thumbnail">
+              <div class="course-thumbnail-bg maths-1">🔢</div>
+              <span class="course-badge badge-beginner">Beginner</span>
+            </div>
+            <div class="course-info">
+              <h3>Numbers & Operations</h3>
+              <p>Build a strong foundation with addition, subtraction, multiplication, and division.</p>
+              <div class="course-meta">
+                <span class="course-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  15 lessons
+                </span>
+                <span class="course-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                  4.1K enrolled
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-goto="lesson">
+            <div class="course-thumbnail">
+              <div class="course-thumbnail-bg maths-2">📐</div>
+              <span class="course-badge badge-intermediate">Intermediate</span>
+            </div>
+            <div class="course-info">
+              <h3>Geometry & Measurement</h3>
+              <p>Explore shapes, angles, area, and volume through visual and hands-on exercises.</p>
+              <div class="course-meta">
+                <span class="course-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  20 lessons
+                </span>
+                <span class="course-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                  2.5K enrolled
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card premium">
+            <div class="course-thumbnail">
+              <div class="course-thumbnail-bg maths-3">📊</div>
+              <span class="course-badge badge-advanced">Advanced</span>
+              <div class="premium-lock">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0110 0v4"/>
+                </svg>
+                <span>Premium</span>
+              </div>
+            </div>
+            <div class="course-info">
+              <h3>Algebra & Functions</h3>
+              <p>Master equations, inequalities, and function analysis for exam preparation.</p>
+              <div class="course-meta">
+                <span class="course-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  22 lessons
+                </span>
+                <span class="course-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                  1.2K enrolled
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Nav (duplicated for this screen) -->
+        <nav class="bottom-nav">
+          <button class="nav-item" data-screen="home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+            <span>Home</span>
+          </button>
+          <button class="nav-item active" data-screen="courses">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+            </svg>
+            <span>Courses</span>
+          </button>
+          <button class="nav-item" data-screen="chat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+            </svg>
+            <span>Chat</span>
+          </button>
+          <button class="nav-item" data-screen="settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            <span>Profile</span>
+          </button>
+        </nav>
+      </section>
+
+      <!-- S6: Lesson View -->
+      <section id="screen-lesson" class="screen screen-lesson">
+        <div class="lesson-header">
+          <button class="lesson-back-btn" data-goto="courses">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          <div class="lesson-header-text">
+            <p class="lesson-subject-label">English · Lesson 5</p>
+            <h3 class="lesson-name">Irregular Verbs</h3>
+          </div>
+          <div class="lesson-ring-wrap">
+            <svg class="lesson-ring-svg" viewBox="0 0 44 44">
+              <circle class="ring-track" cx="22" cy="22" r="18" fill="none" stroke-width="3.5"/>
+              <circle class="ring-progress" cx="22" cy="22" r="18" fill="none" stroke-width="3.5"
+                stroke-dasharray="113" stroke-dashoffset="113"
+                transform="rotate(-90 22 22)"/>
+            </svg>
+            <span class="ring-pct-label" id="lesson-pct">0%</span>
+          </div>
+        </div>
+
+        <div class="lesson-body">
+          <h2 class="lesson-main-title">Past Tense Irregular Verbs</h2>
+
+          <div class="lesson-content-card">
+            <h4>What Are Irregular Verbs?</h4>
+            <p>Irregular verbs <strong>don't follow</strong> the standard "-ed" pattern in past tense. You need to memorize their special forms.</p>
+          </div>
+
+          <div class="verb-table">
+            <div class="verb-row verb-header-row">
+              <span>Base Form</span><span>Past Simple</span><span>Past Participle</span>
+            </div>
+            <div class="verb-row"><span>go</span><span class="verb-highlight">went</span><span>gone</span></div>
+            <div class="verb-row"><span>eat</span><span class="verb-highlight">ate</span><span>eaten</span></div>
+            <div class="verb-row"><span>run</span><span class="verb-highlight">ran</span><span>run</span></div>
+            <div class="verb-row"><span>write</span><span class="verb-highlight">wrote</span><span>written</span></div>
+          </div>
+
+          <div class="lesson-quiz-block" id="lesson-quiz">
+            <div class="quiz-top-bar">
+              <span class="quiz-label-badge">Quick Check</span>
+              <span class="quiz-xp-pill">+10 XP</span>
+            </div>
+            <p class="quiz-question-text">Yesterday, she _____ to school early.</p>
+            <div class="quiz-options-grid">
+              <button class="quiz-option" data-correct="false">goed</button>
+              <button class="quiz-option" data-correct="true">went</button>
+              <button class="quiz-option" data-correct="false">go</button>
+              <button class="quiz-option" data-correct="false">goes</button>
+            </div>
+            <div class="quiz-result" id="quiz-result" style="display:none"></div>
+          </div>
+
+          <button class="btn-continue-lesson" data-goto="courses">
+            Continue to Next Lesson
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+
+          <div class="premium-gate-strip" style="position:relative">
+            <span class="annotation-badge annot-e" style="top:-10px;right:12px">⚡ Engagement</span>
+            <div class="pgs-lock">🔒</div>
+            <div class="pgs-text">
+              <strong>Lesson 6 is Premium</strong>
+              <span>Upgrade to unlock 19 more advanced lessons</span>
+            </div>
+            <button class="btn-pgs-unlock" data-goto="premium">Upgrade</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- S7: Learning Path / Progress -->
+      <section id="screen-progress" class="screen screen-progress">
+        <div class="progress-pg-header">
+          <button class="progress-back-btn" data-goto="home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          <div class="progress-header-text">
+            <h1>My Journey</h1>
+            <p>Level 8 · 2,450 XP</p>
+          </div>
+          <div class="progress-avatar-sm">🧑</div>
+        </div>
+
+        <div class="progress-body">
+          <div class="weekly-chart-card">
+            <h3>This Week</h3>
+            <div class="bar-chart">
+              <div class="bar-col"><div class="bar" style="--bh: 40%"></div><span>Mon</span></div>
+              <div class="bar-col"><div class="bar" style="--bh: 75%"></div><span>Tue</span></div>
+              <div class="bar-col"><div class="bar" style="--bh: 55%"></div><span>Wed</span></div>
+              <div class="bar-col"><div class="bar bar-today" style="--bh: 90%"></div><span>Thu</span></div>
+              <div class="bar-col"><div class="bar bar-future" style="--bh: 10%"></div><span>Fri</span></div>
+              <div class="bar-col"><div class="bar bar-future" style="--bh: 10%"></div><span>Sat</span></div>
+              <div class="bar-col"><div class="bar bar-future" style="--bh: 10%"></div><span>Sun</span></div>
+            </div>
+          </div>
+
+          <h3 class="progress-section-title">Achievements</h3>
+          <div class="achievements-row">
+            <div class="achievement earned"><span class="ach-icon">🔥</span><span class="ach-label">Streak 7</span></div>
+            <div class="achievement earned"><span class="ach-icon">⭐</span><span class="ach-label">First 100</span></div>
+            <div class="achievement earned"><span class="ach-icon">📚</span><span class="ach-label">Bookworm</span></div>
+            <div class="achievement locked"><span class="ach-icon">🏆</span><span class="ach-label">Top 10%</span></div>
+            <div class="achievement locked"><span class="ach-icon">💎</span><span class="ach-label">Perfect 30</span></div>
+          </div>
+
+          <h3 class="progress-section-title">Learning Roadmap</h3>
+          <div class="roadmap-wrap">
+            <div class="roadmap-line-col">
+              <svg class="roadmap-svg" viewBox="0 0 4 300" preserveAspectRatio="none">
+                <line class="rm-line-bg" x1="2" y1="0" x2="2" y2="300"/>
+                <line class="rm-line-fill" x1="2" y1="0" x2="2" y2="300"
+                  stroke-dasharray="300" stroke-dashoffset="300"/>
+              </svg>
+            </div>
+            <div class="roadmap-nodes">
+              <div class="rm-node done">
+                <div class="rm-dot done-dot">✓</div>
+                <div class="rm-info"><h4>Grammar Basics</h4><p>Completed · 450 XP</p></div>
+              </div>
+              <div class="rm-node done">
+                <div class="rm-dot done-dot">✓</div>
+                <div class="rm-info"><h4>Present Tense</h4><p>Completed · 380 XP</p></div>
+              </div>
+              <div class="rm-node current">
+                <div class="rm-dot current-dot">5</div>
+                <div class="rm-info"><h4>Past Tense</h4><p>In Progress · Lesson 5/8</p></div>
+              </div>
+              <div class="rm-node locked">
+                <div class="rm-dot locked-dot">🔒</div>
+                <div class="rm-info"><h4>Future Tense</h4><p>Locked</p></div>
+              </div>
+              <div class="rm-node locked">
+                <div class="rm-dot locked-dot premium-dot">✦</div>
+                <div class="rm-info"><h4>Advanced Writing</h4><p>Premium</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- S8: Community Chat -->
+      <section id="screen-chat" class="screen screen-chat">
+        <div class="chat-header">
+          <h1>Community</h1>
+          <div class="chat-online-badge">
+            <span class="online-dot"></span>
+            <span>247 online</span>
+          </div>
+        </div>
+
+        <div class="chat-rooms-tabs">
+          <button class="chat-room-tab active" data-room="general">💬 General</button>
+          <button class="chat-room-tab" data-room="english">📖 English</button>
+          <button class="chat-room-tab" data-room="maths">🧮 Maths</button>
+        </div>
+
+        <div class="chat-messages" id="chat-messages">
+          <div class="chat-date-divider">Today</div>
+
+          <div class="chat-msg received chat-msg-anim" style="--delay:0s">
+            <div class="chat-avatar-sm" style="background:#FF6B6B">👩</div>
+            <div class="chat-bubble-wrap">
+              <span class="chat-username">Sarah K.</span>
+              <div class="chat-bubble">Just finished the irregular verbs lesson! That quiz was tough 😅</div>
+              <div class="chat-reactions"><span class="reaction">😂 3</span><span class="reaction">❤️ 5</span></div>
+            </div>
+          </div>
+
+          <div class="chat-msg received chat-msg-anim" style="--delay:0.15s">
+            <div class="chat-avatar-sm" style="background:#00B894">👨</div>
+            <div class="chat-bubble-wrap">
+              <span class="chat-username">Mike L.</span>
+              <div class="chat-bubble">Same! "went" always trips me up lol. Anyone have tips?</div>
+              <div class="chat-reactions"><span class="reaction">👍 7</span></div>
+            </div>
+          </div>
+
+          <div class="chat-msg sent chat-msg-anim" style="--delay:0.3s">
+            <div class="chat-bubble-wrap">
+              <div class="chat-bubble">I made flashcards for all of them! Happy to share 📚</div>
+              <div class="chat-reactions"><span class="reaction">🙌 12</span><span class="reaction">❤️ 8</span></div>
+            </div>
+          </div>
+
+          <div class="chat-msg received chat-msg-anim" style="--delay:0.45s">
+            <div class="chat-avatar-sm" style="background:#FDCB6E">👧</div>
+            <div class="chat-bubble-wrap">
+              <span class="chat-username">Priya M.</span>
+              <div class="chat-bubble">Yes please! Also just hit a 20-day streak 🔥🔥🔥</div>
+              <div class="chat-reactions"><span class="reaction">🔥 15</span><span class="reaction">🎉 9</span></div>
+            </div>
+          </div>
+
+          <div class="chat-msg received chat-msg-anim" style="--delay:0.6s">
+            <div class="chat-avatar-sm" style="background:#74B9FF">👦</div>
+            <div class="chat-bubble-wrap">
+              <span class="chat-username">James T.</span>
+              <div class="chat-bubble">Congrats Priya! I'm on day 8 — you're an inspiration 💪</div>
+            </div>
+          </div>
+
+          <div class="chat-typing" id="chat-typing">
+            <div class="typing-avatar" style="background:#A29BFE">👩</div>
+            <div class="typing-indicator">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="typing-name">Sarah is typing...</span>
+          </div>
+        </div>
+
+        <div class="chat-input-bar">
+          <button class="chat-emoji-btn">😊</button>
+          <input type="text" class="chat-input" id="chat-input-field" placeholder="Type a message...">
+          <button class="chat-send-btn" id="chat-send-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="bottom-nav">
+          <button class="nav-item" data-screen="home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+            <span>Home</span>
+          </button>
+          <button class="nav-item" data-screen="courses">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+            </svg>
+            <span>Courses</span>
+          </button>
+          <button class="nav-item active" data-screen="chat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+            </svg>
+            <span>Chat</span>
+          </button>
+          <button class="nav-item" data-screen="settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            <span>Profile</span>
+          </button>
+        </nav>
+      </section>
+
+      <!-- S9: Premium Upgrade -->
+      <section id="screen-premium" class="screen screen-premium">
+        <div class="premium-pg-header">
+          <button class="premium-back-btn" data-goto="courses">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          <div class="premium-header-inner">
+            <div class="premium-crown-wrap">👑</div>
+            <h1>Go Premium</h1>
+            <p>Unlock your full learning potential</p>
+          </div>
+        </div>
+
+        <div class="premium-body">
+          <div class="pricing-toggle-wrap">
+            <span class="pt-label">Monthly</span>
+            <label class="pt-switch">
+              <input type="checkbox" id="billing-toggle">
+              <span class="pt-thumb"></span>
+            </label>
+            <span class="pt-label">Yearly <span class="pt-save-badge">Save 40%</span></span>
+          </div>
+
+          <div class="pricing-cards">
+            <div class="pricing-card">
+              <div class="pricing-plan-name">Free</div>
+              <div class="pricing-price">
+                <span class="price-amount">£0</span><span class="price-period">/mo</span>
+              </div>
+              <ul class="pricing-features">
+                <li class="feat-yes">5 lessons per month</li>
+                <li class="feat-yes">Basic quizzes</li>
+                <li class="feat-yes">Community chat</li>
+                <li class="feat-no">Unlimited lessons</li>
+                <li class="feat-no">Advanced courses</li>
+                <li class="feat-no">Offline downloads</li>
+                <li class="feat-no">Progress analytics</li>
+              </ul>
+              <button class="btn-pricing current">Current Plan</button>
+            </div>
+
+            <div class="pricing-card pricing-card-popular">
+              <div class="popular-ribbon">Most Popular</div>
+              <div class="pricing-plan-name">Premium</div>
+              <div class="pricing-price">
+                <span class="price-amount" id="price-amount">£7.99</span><span class="price-period" id="price-period">/mo</span>
+              </div>
+              <ul class="pricing-features">
+                <li class="feat-yes">Unlimited lessons</li>
+                <li class="feat-yes">All advanced courses</li>
+                <li class="feat-yes">Offline downloads</li>
+                <li class="feat-yes">Detailed analytics</li>
+                <li class="feat-yes">Priority support</li>
+                <li class="feat-yes">Ad-free experience</li>
+                <li class="feat-yes">Completion certificate</li>
+              </ul>
+              <button class="btn-pricing upgrade pulse-cta" data-goto="home">Start 7-Day Free Trial</button>
+            </div>
+          </div>
+
+          <div class="testimonials-section">
+            <h3 class="testimonials-title">What learners say</h3>
+            <div class="testimonials-scroll">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"Went from B1 to C1 English in just 6 months. Worth every penny!"</p>
+                <div class="testimonial-author">
+                  <span class="t-avatar" style="background:#FF6B6B">👩</span>
+                  <span>Sarah K. · Premium 8 months</span>
+                </div>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"The maths courses helped my daughter pass her GCSEs with an A grade!"</p>
+                <div class="testimonial-author">
+                  <span class="t-avatar" style="background:#00B894">👨</span>
+                  <span>Mike L. · Premium 1 year</span>
+                </div>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★☆</div>
+                <p>"Love the streak system. It keeps me coming back every single day."</p>
+                <div class="testimonial-author">
+                  <span class="t-avatar" style="background:#FDCB6E">👧</span>
+                  <span>Priya M. · Premium 3 months</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- S10: Settings & Profile -->
+      <section id="screen-settings" class="screen screen-settings">
+        <div class="settings-hero">
+          <div class="settings-avatar-wrap">
+            <div class="settings-avatar">🧑</div>
+          </div>
+          <h2 class="settings-name">Alex Chen</h2>
+          <p class="settings-level">Level 8 · 12-day streak 🔥</p>
+          <div class="settings-stats-row">
+            <div class="settings-stat">
+              <strong>2,450</strong>
+              <span>XP</span>
+            </div>
+            <div class="settings-stat-divider"></div>
+            <div class="settings-stat">
+              <strong>23</strong>
+              <span>Lessons</span>
+            </div>
+            <div class="settings-stat-divider"></div>
+            <div class="settings-stat">
+              <strong>12</strong>
+              <span>Streak</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-body">
+          <div class="settings-section-label">Learning</div>
+          <div class="settings-card">
+            <div class="settings-row">
+              <div class="settings-row-left">
+                <span class="settings-row-icon">🌐</span>
+                <div class="settings-row-text">
+                  <span class="settings-row-title">Language</span>
+                  <span class="settings-row-sub">English (UK)</span>
+                </div>
+              </div>
+              <svg class="settings-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+            <div class="settings-row settings-row-toggle">
+              <div class="settings-row-left">
+                <span class="settings-row-icon">🔔</span>
+                <div class="settings-row-text">
+                  <span class="settings-row-title">Daily Reminders</span>
+                  <span class="settings-row-sub">Streak &amp; lesson alerts</span>
+                </div>
+              </div>
+              <label class="s-toggle">
+                <input type="checkbox" checked id="notif-toggle">
+                <span class="s-toggle-thumb"></span>
+              </label>
+            </div>
+            <div class="settings-row settings-row-toggle" style="border-bottom:none">
+              <div class="settings-row-left">
+                <span class="settings-row-icon">🌙</span>
+                <div class="settings-row-text">
+                  <span class="settings-row-title">Dark Mode</span>
+                  <span class="settings-row-sub">Easy on the eyes</span>
+                </div>
+              </div>
+              <label class="s-toggle">
+                <input type="checkbox" id="dark-mode-toggle">
+                <span class="s-toggle-thumb"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="settings-section-label">Account</div>
+          <div class="settings-card">
+            <div class="settings-row">
+              <div class="settings-row-left">
+                <span class="settings-row-icon">👑</span>
+                <div class="settings-row-text">
+                  <span class="settings-row-title">Subscription</span>
+                  <span class="settings-row-sub settings-row-sub-free">Free Plan</span>
+                </div>
+              </div>
+              <button class="settings-upgrade-btn" data-goto="premium">Upgrade</button>
+            </div>
+            <div class="settings-row" style="border-bottom:none">
+              <div class="settings-row-left">
+                <span class="settings-row-icon">🔐</span>
+                <div class="settings-row-text">
+                  <span class="settings-row-title">Privacy &amp; Security</span>
+                </div>
+              </div>
+              <svg class="settings-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+          </div>
+
+          <div class="settings-referral-card">
+            <div class="referral-top">
+              <span class="referral-gift">🎁</span>
+              <div>
+                <h4>Invite Friends, Earn XP!</h4>
+                <p>Get 500 XP for every friend who joins</p>
+              </div>
+            </div>
+            <div class="referral-code-row">
+              <span class="referral-code">ALEX-SPARK</span>
+              <button class="referral-copy-btn" id="copy-referral">Copy</button>
+            </div>
+          </div>
+
+          <div class="settings-section-label">Support</div>
+          <div class="settings-card">
+            <div class="settings-row">
+              <div class="settings-row-left">
+                <span class="settings-row-icon">⭐</span>
+                <div class="settings-row-text">
+                  <span class="settings-row-title">Rate EduSpark</span>
+                  <span class="settings-row-sub">Help us improve</span>
+                </div>
+              </div>
+              <div class="rating-stars" id="rating-stars">
+                <span class="rating-star" data-val="1">★</span>
+                <span class="rating-star" data-val="2">★</span>
+                <span class="rating-star" data-val="3">★</span>
+                <span class="rating-star" data-val="4">★</span>
+                <span class="rating-star" data-val="5">★</span>
+              </div>
+            </div>
+            <div class="settings-row" style="border-bottom:none">
+              <div class="settings-row-left">
+                <span class="settings-row-icon">💬</span>
+                <div class="settings-row-text">
+                  <span class="settings-row-title">Send Feedback</span>
+                </div>
+              </div>
+              <svg class="settings-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <nav class="bottom-nav">
+          <button class="nav-item" data-screen="home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+            <span>Home</span>
+          </button>
+          <button class="nav-item" data-screen="courses">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+            </svg>
+            <span>Courses</span>
+          </button>
+          <button class="nav-item" data-screen="chat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+            </svg>
+            <span>Chat</span>
+          </button>
+          <button class="nav-item active" data-screen="settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            <span>Profile</span>
+          </button>
+        </nav>
+      </section>
+
+    </div><!-- /phone-screen -->
+  </div><!-- /phone-frame -->
+
+  <!-- ===== Strategy Panel ===== -->
+  <div class="strategy-panel">
+    <button class="annotation-toggle-btn" id="annotation-toggle">
+      <span class="annot-btn-dot"></span>
+      Show Marketing Annotations
+    </button>
+    <div class="strategy-card">
+      <div class="current-screen-label">Current Screen</div>
+      <div class="current-screen-name" id="current-screen-name">S1 — Splash / Welcome</div>
+      <div id="strategy-content">
+        <!-- Dynamically updated by JS -->
+      </div>
+    </div>
+
+    <div class="strategy-card">
+      <h3>📊 Marketing Framework</h3>
+      <div class="strategy-indicator">
+        <span class="indicator-dot dot-acquisition"></span>
+        <span>Acquisition — Getting users in</span>
+      </div>
+      <div class="strategy-indicator">
+        <span class="indicator-dot dot-retention"></span>
+        <span>Retention — Keeping users coming back</span>
+      </div>
+      <div class="strategy-indicator">
+        <span class="indicator-dot dot-engagement"></span>
+        <span>Engagement — Deepening interaction</span>
+      </div>
+    </div>
+
+    <div class="strategy-card">
+      <h3>🗺️ Screen Map</h3>
+      <ul class="strategy-list" style="margin-top:0">
+        <li><strong>S1</strong> Splash — brand trust & social proof</li>
+        <li><strong>S2</strong> Onboarding — value proposition carousel</li>
+        <li><strong>S3</strong> Sign Up — frictionless onboarding</li>
+        <li><strong>S4</strong> Dashboard — daily habit hook</li>
+        <li><strong>S5</strong> Courses — content discovery</li>
+        <li><strong>S6</strong> Lesson — core learning + quiz</li>
+        <li><strong>S7</strong> Progress — journey visualisation</li>
+        <li><strong>S8</strong> Chat — social community & engagement <a class="smap-link" data-goto="chat">→</a></li>
+        <li><strong>S9</strong> Premium — freemium conversion <a class="smap-link" data-goto="premium">→</a></li>
+        <li><strong>S10</strong> Settings — personalisation &amp; referral loop <a class="smap-link" data-goto="settings">→</a></li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- /page-wrapper -->
+
+<script src="app.js"></script>
+</body>
+</html>
